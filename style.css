@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'SoDoSans';
 }
 @font-face {
     font-family: 'SoDoSans';
@@ -12,10 +13,9 @@ strong {
 ul {
     list-style: none;
 }
-hr{
-    border: 0;
-    border-top: 2px solid #cecdcd71;
-}
+
+/* nav bar area */
+
 .header-bar {
     display: flex;
     width: 100%;
@@ -46,13 +46,16 @@ hr{
     color: #00754a;
     cursor: pointer;
 }
-.find-text {
+.signup-container p {
     padding-left: 10px;
     font-family: 'SoDoSans';
     font-size: 14px;
     font-weight: 600;
 }
-.find-text:hover {
+.fa-location-dot{
+    padding-right : 5px ;
+}
+.signup-container p:hover {
     color: #00754a;
     cursor: pointer;
 }
@@ -63,13 +66,6 @@ hr{
 .sign-up {
     margin-left: 40px;
     margin-right: 20px;
-}
-.location {
-    width: 26px;
-    height: 28px;
-}
-.location:hover {
-    content: url(assets/spotify.png);
 }
 .sign-in-btn, .sign-up-btn {
     width: auto;
@@ -82,6 +78,7 @@ hr{
     outline: 0;
     border: 1px solid black;
     margin-right: 20px;
+    cursor: pointer;
 }
 .sign-in-btn {
     border-radius: 28px;
@@ -95,35 +92,12 @@ hr{
 .sign-up-btn:hover {
     background-color: #000000c2;
 }
-
-.item{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    align-items: stretch;
-    margin-top: 30px;
+.sign-in-btn:hover {
+    background-color: #0000001c;
 }
 
-.text {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 70px;
-    padding-right: 70px;
-}
-h1{
-    font-size: 48px;
-    text-align: center;
-    padding: 20px;
-    font-family: 'SoDoSans';
-    font-weight: 600;
-    color: white;
-}
+/* body area */
 
-.text-part-4 h1, .text-part-5 h1, .text-part-6 h1 {
-    font-size: 26px;
-}
 .body-container p{
     display: flex;
     color: white;
@@ -131,6 +105,35 @@ h1{
     font-family: 'SoDoSans';
     text-align: center;
     padding-bottom : 40px;
+}
+.item{
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+}
+.image-part {
+    width: 50%;
+}
+.text {
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+.text h1{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.text-part-4 h1, .text-part-5 h1, .text-part-6 h1 {
+    font-size: 26px;
 }
 .text-part-4 p, .text-part-5 p, .text-part-6 p {
     font-size: 20px;
@@ -211,6 +214,12 @@ h1{
     padding-right: 350px;
     line-height: 1.5;
 }
+section hr {
+    border: 0;
+    border-top: 2px solid #cecdcd71;
+}
+
+/* footer area */
 .footer-container {
     display: flex;
     background-color: white;
@@ -227,17 +236,17 @@ h1{
     font-size: 15px;
     color: #00000094;
 }
-.foot-text {
+.footer-text li {
     margin-bottom: 20px;
 }
-.foot-text:hover {
+.footer-text li:hover {
     color: #000000;
     cursor: pointer;
 }
-.text-head:hover {
+.footer-text li:first-child:hover {
     cursor: text;
 }
-.text-head {
+.footer-text li:first-child {
     font-size: 18px;
     color: black;
 }
@@ -248,23 +257,25 @@ h1{
     margin-bottom: 35px;
     opacity: 88%;
 }
-.app-icon-img {
-    width: 33px;
-    height: 33px;
-}
-.app-icons {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    border: 0;
+
+.footer-icons button {
+    display: flex;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
-    padding-top: 2px;
+    border-radius: 50%;
+    border: 0;
+    align-items: center;
+    justify-content: center;
 }
-.app-icons:hover {
+.footer-icons button:hover {
     background-color: #cacaca75;
     transition: all 0.3 ease-in;
 }
-.hr-2 {
+
+footer hr{
+    border: 0;
+    border-top: 2px solid #cecdcd71;
     width: 93%;
     margin: 0 auto;
 }
@@ -274,14 +285,14 @@ h1{
     padding-left: 45px;
     width: fit-content;
 }
-.text-last {
+.final-text-container a {
     color: #000000;
     font-size: 15px;
     font-family: 'SoDoSans';
     line-height: 2.8;
     text-decoration: none;
 }
-.text-last:hover {
+.final-text-container a:hover {
     text-decoration: underline;
 }
 .copyright{
